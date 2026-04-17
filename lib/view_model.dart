@@ -18,7 +18,7 @@ class UserViewModel extends ChangeNotifier {
     try {
       user = await _service.fetchUser();
     } catch (e) {
-      errorMessage = 'Something went wrong: ${e}';
+      errorMessage = 'Something went wrong: $e';
     } finally {
       isLoading = false;
       notifyListeners();
